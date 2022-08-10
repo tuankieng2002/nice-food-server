@@ -1,0 +1,195 @@
+POST http://localhost:3000/api/v1/users/register
+Content-Type: application/json
+
+{
+    "name": "a",
+    "email": "a@gmail.com",
+    "password": "123456",
+    "phone": "0955662233",
+    "isAdmin": false,
+    "street": "Street 5",
+    "apartment": "Apartment 4",
+    "zip": "15002",
+    "city": "Newyork",
+    "country": "USA"
+}
+
+###
+POST http://localhost:3000/api/v1/users/login
+Content-Type: application/json
+
+{
+    "email": "thomas@gmail.com",
+    "password": "123456"
+}
+
+//lay tất cả danh sách người dùng
+###
+GET http://localhost:3000/api/v1/users
+//lay user theo id
+###
+GET http://localhost:3000/api/v1/users/62e41b13f83877bebf203f24
+
+###
+GET http://localhost:3000/api/v1/users
+
+###
+GET http://localhost:3000/api/v1/users/get/count
+
+###
+DELETE http://localhost:3000/api/v1/users/62e5545cdf7e31c28b639356
+
+
+
+//product
+###
+POST http://localhost:3000/api/v1/products
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmU0MWIxM2Y4Mzg3N2JlYmYyMDNmMjQiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NTkyNDM0MzcsImV4cCI6MTY1OTMyOTgzN30.SpCqcTbuxDdKTLvHqFRtfVWHbdlfknJBluuQaHibgto
+
+{
+    "name": "product 15",
+    "description" : "product 1 description",
+    "richDescription": "product 1 richDescription",
+    "image": "product1/image.jpg",
+    "brand": "product 1 brand",
+    "price": 25,
+    "category": "62e33f4b21e4d0b2d2bede9c",
+    "countInStock": 10,
+    "rating": 4,
+    "numReviews": 22,
+    "isFeatured": true
+}
+
+###
+GET http://localhost:3000/api/v1/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmU0MWIxM2Y4Mzg3N2JlYmYyMDNmMjQiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NTkzNjc4MzMsImV4cCI6MTY1OTQ1NDIzM30.BwhYM7qSjH08F9rUZ4R4MrJhDXCuyrn5rdDAqs_8Lqc
+
+###
+GET http://localhost:3000/api/v1/products/62e349cd79188f959ce71cef
+
+###
+PUT http://localhost:3000/api/v1/products/62e349cd79188f959ce71cef
+Content-Type: application/json
+
+{
+    "name": "product 10",
+    "description" : "product 4 description",
+    "richDescription": "product 4 richDescription",
+    "image": "product4/image.jpg",
+    "brand": "product 4 brand",
+    "price": 26,
+    "category": "62e2bdfbeca3a83d4408bac7",
+    "countInStock": 11,
+    "rating": 5,
+    "numReviews": 24,
+    "isFeatured": false
+}
+
+###
+DELETE http://localhost:3000/api/v1/products/62e3497af3c6b2f51e44c686
+
+###
+GET http://localhost:3000/api/v1/products/get/count
+
+###
+GET http://localhost:3000/api/v1/products/get/featured/3
+
+//lay nhung sp theo id category
+###
+GET http://localhost:3000/api/v1/products?categories=62e33f4b21e4d0b2d2bede9c,62e2bdfbeca3a83d4408bac7
+
+
+//category
+###
+POST http://localhost:3000/api/v1/categories
+Content-Type: application/json
+
+{
+    "name": "laptop",
+    "icon": "icon-laptop",
+    "color": "#000000"
+}
+
+
+###
+GET http://localhost:3000/api/v1/categories
+
+
+###
+GET http://localhost:3000/api/v1/categories/62e2bdfbeca3a83d4408bac7
+
+###
+DELETE http://localhost:3000/api/v1/categories/62e2bdb26fd10d4ed9cbb8a5
+
+###
+PUT http://localhost:3000/api/v1/categories/62e344d4e70224f9dd6a8a40
+Content-Type: application/json
+
+{
+    "name": "iphone 6",
+    "icon": "icon-iphone6",
+    "color": "#ffffff"
+}
+
+
+###
+
+//order
+###
+POST http://localhost:3000/api/v1/orders
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmU0MWIxM2Y4Mzg3N2JlYmYyMDNmMjQiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NTkyODAyNTEsImV4cCI6MTY1OTM2NjY1MX0.zD22NFw6A2uMdlC0E8SxVS41FwOCz1cvhFVFfXZVAWg
+
+{
+    "orderItems": [
+        {
+            "quantity": 3,
+            "product": "62e34950b1b3505dcff2eed5"
+        },
+        {
+            "quantity": 2,
+            "product": "62e349b179188f959ce71ceb"
+        }
+    ],
+    "shippingAddress1": "Flowers Street, 45",
+    "shippingAddress2": "1-B",
+    "city": "Prague",
+    "zip": "00000",
+    "country": "Usa",
+    "phone": "0945635656",
+    "user": "62e41b13f83877bebf203f24"
+}
+
+###
+GET http://localhost:3000/api/v1/orders
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmU0MWIxM2Y4Mzg3N2JlYmYyMDNmMjQiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NTk0Mzc3MjEsImV4cCI6MTY1OTUyNDEyMX0.R_lzoUyNqcO9YJJXL40U0SzzWUiWTy2Di35NyZnXasQ
+
+###
+GET http://localhost:3000/api/v1/orders/62e6b4657d3534c39a41c083
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmU0MWIxM2Y4Mzg3N2JlYmYyMDNmMjQiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NTkyODAyNTEsImV4cCI6MTY1OTM2NjY1MX0.zD22NFw6A2uMdlC0E8SxVS41FwOCz1cvhFVFfXZVAWg
+
+###
+PUT http://localhost:3000/api/v1/orders/62e6a653a43d08e2c1ab3176
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmU0MWIxM2Y4Mzg3N2JlYmYyMDNmMjQiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NTkyODAyNTEsImV4cCI6MTY1OTM2NjY1MX0.zD22NFw6A2uMdlC0E8SxVS41FwOCz1cvhFVFfXZVAWg
+
+{
+    "status": "shipped"
+}
+
+###
+DELETE http://localhost:3000/api/v1/orders/62e6ad97cc15acdf43b49e5c
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmU0MWIxM2Y4Mzg3N2JlYmYyMDNmMjQiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NTkyODAyNTEsImV4cCI6MTY1OTM2NjY1MX0.zD22NFw6A2uMdlC0E8SxVS41FwOCz1cvhFVFfXZVAWg
+
+###
+GET http://localhost:3000/api/v1/orders/get/totalsales
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmU0MWIxM2Y4Mzg3N2JlYmYyMDNmMjQiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NTkyODAyNTEsImV4cCI6MTY1OTM2NjY1MX0.zD22NFw6A2uMdlC0E8SxVS41FwOCz1cvhFVFfXZVAWg
+
+###
+GET http://localhost:3000/api/v1/orders/get/count
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmU0MWIxM2Y4Mzg3N2JlYmYyMDNmMjQiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NTkyODAyNTEsImV4cCI6MTY1OTM2NjY1MX0.zD22NFw6A2uMdlC0E8SxVS41FwOCz1cvhFVFfXZVAWg
+
+###
+GET http://localhost:3000/api/v1/orders/get/userorders/62e41b13f83877bebf203f24
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmU0MWIxM2Y4Mzg3N2JlYmYyMDNmMjQiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NTk0Mzc3MjEsImV4cCI6MTY1OTUyNDEyMX0.R_lzoUyNqcO9YJJXL40U0SzzWUiWTy2Di35NyZnXasQ
