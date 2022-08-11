@@ -1,3 +1,7 @@
+POST http://localhost:3000
+
+
+###
 POST http://localhost:3000/api/v1/users/register
 Content-Type: application/json
 
@@ -63,7 +67,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmU0M
 
 ###
 GET http://localhost:3000/api/v1/products
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmU0MWIxM2Y4Mzg3N2JlYmYyMDNmMjQiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NTkzNjc4MzMsImV4cCI6MTY1OTQ1NDIzM30.BwhYM7qSjH08F9rUZ4R4MrJhDXCuyrn5rdDAqs_8Lqc
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmY0NWYzMmI4ZDc2ZjZlOTZkMWQwYmMiLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNjYwMTgyMzYxLCJleHAiOjE2NjAyNjg3NjF9.yCclPN9wcQlXodyP7FnMOoJoWHrQAMGVRahnuPEymWM
 
 ###
 GET http://localhost:3000/api/v1/products/62e349cd79188f959ce71cef
@@ -104,6 +108,7 @@ GET http://localhost:3000/api/v1/products?categories=62e33f4b21e4d0b2d2bede9c,62
 ###
 POST http://localhost:3000/api/v1/categories
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmU0MWIxM2Y4Mzg3N2JlYmYyMDNmMjQiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NjAxODI1MzUsImV4cCI6MTY2MDI2ODkzNX0.A338vp_XLVSli29ydhS2Vit6F906vHXPBecrN0WDnds
 
 {
     "name": "laptop",
