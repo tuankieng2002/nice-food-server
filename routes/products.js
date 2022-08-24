@@ -60,15 +60,20 @@ router.get('/:id', async (req, res) => {
 router.post(`/`, uploadOptions.single('image'), async (req, res) => {
 
     if (!mongoose.isValidObjectId(req.body.category)) {
+        console.log("req.body not found");
         return res.status(400).send("Inavlid category id");
     };
 
     const category = await Category.findById(req.body.category);
-    if (!category)
+    if (!category){
+        console.log("category not found");
         return res.status(400).send('Invalid Category')
+
+    }
 
     const file = req.file;
     if (!file) {
+        console.log("file not found");
         return res.status(400).send('No image in the request')
     }
 

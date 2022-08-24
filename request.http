@@ -23,7 +23,7 @@ POST http://localhost:3000/api/v1/users/login
 Content-Type: application/json
 
 {
-    "email": "tuankieng@gmail.com",
+    "email": "a@gmail.com",
     "password": "123456"
 }
 
@@ -144,26 +144,26 @@ Content-Type: application/json
 ###
 POST http://localhost:3000/api/v1/orders
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmU0MWIxM2Y4Mzg3N2JlYmYyMDNmMjQiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NTkyODAyNTEsImV4cCI6MTY1OTM2NjY1MX0.zD22NFw6A2uMdlC0E8SxVS41FwOCz1cvhFVFfXZVAWg
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmZjNjA1YmNkMTc4MTY2NzkyYmRjNGYiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NjEyNjE3MjYsImV4cCI6MTY2MTM0ODEyNn0.p7S7JP5KmGIVqp8xYDA59ZbWUG8awSUAQUUu1WQwHnI
 
 {
     "orderItems": [
         {
             "quantity": 3,
-            "product": "62e34950b1b3505dcff2eed5"
+            "product": "62f3ca2b5e15a6593329e6dd"
         },
         {
             "quantity": 2,
-            "product": "62e349b179188f959ce71ceb"
+            "product": "6304729cccbd8b3f470c87e7"
         }
     ],
     "shippingAddress1": "Flowers Street, 45",
     "shippingAddress2": "1-B",
     "city": "Prague",
-    "zip": "00000",
+    "zip": "000002",
     "country": "Usa",
     "phone": "0945635656",
-    "user": "62e41b13f83877bebf203f24"
+    "user": "630241b3222e089834aa62fb"
 }
 
 ###
