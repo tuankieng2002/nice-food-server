@@ -116,7 +116,7 @@ router.put('/:id', async (req, res) => {
     const category = await Category.findById(req.body.category);
 
     if (!category) {
-        return res.status(400).send('Invalid Category')
+        return res.status(500).send('Invalid Category')
     }
 
     const product = await Product.findByIdAndUpdate(req.params.id,
@@ -136,7 +136,7 @@ router.put('/:id', async (req, res) => {
         { new: true }
     )
     if (!product) {
-        return res.status(500).send('The product cannot be updated!!');
+        return res.status(400).send('The product cannot be updated!!');
     }
     res.send(product);
 })
