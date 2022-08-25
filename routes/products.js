@@ -144,11 +144,14 @@ router.put('/:id', async (req, res) => {
 router.delete('/:id', (req, res) => {
     Product.findByIdAndRemove(req.params.id).then(product => {
         if (product) {
+            console.log('the product is deleted!');
             return res.status(200).json({ success: true, message: 'the product is deleted!' });
         } else {
+            console.log('product not found!');
             return res.status(404).json({ success: false, message: 'product not found!' });
         }
     }).catch(err => {
+        console.log("error: " + err);
         return res.status(400).json({ success: false, error: err });
     })
 })

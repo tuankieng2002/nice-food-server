@@ -91,7 +91,7 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:3000/api/v1/products/62e3497af3c6b2f51e44c686
+DELETE http://localhost:3000/api/v1/products/630472b4ccbd8b3f470c87ea
 
 ###
 GET http://localhost:3000/api/v1/products/get/count
