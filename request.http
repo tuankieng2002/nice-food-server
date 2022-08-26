@@ -144,17 +144,17 @@ Content-Type: application/json
 ###
 POST http://localhost:3000/api/v1/orders
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmZjNjA1YmNkMTc4MTY2NzkyYmRjNGYiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NjEyNjE3MjYsImV4cCI6MTY2MTM0ODEyNn0.p7S7JP5KmGIVqp8xYDA59ZbWUG8awSUAQUUu1WQwHnI
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmZjNjA1YmNkMTc4MTY2NzkyYmRjNGYiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NjE0MjAyNzMsImV4cCI6MTY2MTUwNjY3M30.NaYRv72J0aILMw1cOv0DorbiOdiAuPeIgQxznawezZo
 
 {
     "orderItems": [
         {
             "quantity": 3,
-            "product": "62f3ca2b5e15a6593329e6dd"
+            "product": "630638138a36af25e28463bd"
         },
         {
             "quantity": 2,
-            "product": "6304729cccbd8b3f470c87e7"
+            "product": "63072534a7ef40b6cf60da68"
         }
     ],
     "shippingAddress1": "Flowers Street, 45",
@@ -163,7 +163,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmZjN
     "zip": "000002",
     "country": "Usa",
     "phone": "0945635656",
-    "user": "630241b3222e089834aa62fb"
+    "user": "62fc605bcd178166792bdc4f"
 }
 
 ###

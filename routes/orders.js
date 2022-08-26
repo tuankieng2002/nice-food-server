@@ -34,7 +34,7 @@ router.post('/', async (req, res) => {
         })
 
         newOrderItem = await newOrderItem.save();
-
+        console.log("newOrderItem._id");
         return newOrderItem._id;
     }))
     const orderItemsIdsResolved = await orderItemsIds;
@@ -65,6 +65,7 @@ router.post('/', async (req, res) => {
     order = await order.save();
 
     if (!order){
+        console.log('The order cannot be created');
         return res.status(400).send('the order cannot be created!');
     }
     res.send(order);

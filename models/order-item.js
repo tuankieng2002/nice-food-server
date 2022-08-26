@@ -11,4 +11,13 @@ const orderItemSchema = mongoose.Schema({
     }
 })
 
+//tao id ảo
+orderItemSchema.virtual('id').get(function () {
+    return this._id.toHexString();
+});
+
+orderItemSchema.set('toJSON', {
+    virtuals: true,
+});
+
 module.exports = mongoose.model('OrderItems', orderItemSchema);
