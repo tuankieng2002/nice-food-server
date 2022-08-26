@@ -104,18 +104,20 @@ router.post(`/`, uploadOptions.single('image'), async (req, res) => {
 
 router.put('/:id', async (req, res) => {
     if (!mongoose.isValidObjectId(req.body.category)) {
-
+        console.log("Invalid category id");
         return res.status(400).send("Invalid category id");
 
     };
 
     if (!mongoose.isValidObjectId(req.params.id)) {
+        console.log("Invalid product id");
         return res.status(400).send('Invalid Product Id')
     }
 
     const category = await Category.findById(req.body.category);
 
     if (!category) {
+        console.log("Invalid category");
         return res.status(500).send('Invalid Category')
     }
 
@@ -136,6 +138,7 @@ router.put('/:id', async (req, res) => {
         { new: true }
     )
     if (!product) {
+        console.log("The product cannot be updated!!");
         return res.status(400).send('The product cannot be updated!!');
     }
     res.send(product);
