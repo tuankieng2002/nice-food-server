@@ -106,8 +106,8 @@ router.put('/:id', async (req, res) => {
     if (!mongoose.isValidObjectId(req.body.category)) {
         console.log("Invalid category id");
         return res.status(400).send("Invalid category id");
-
     };
+
 
     if (!mongoose.isValidObjectId(req.params.id)) {
         console.log("Invalid product id");
