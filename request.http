@@ -77,13 +77,13 @@ PUT http://localhost:3000/api/v1/products/630638138a36af25e28463bd
 Content-Type: application/json
 
 {
-    "name": "product 10",
+    "name": "product 11",
     "description" : "product 4 description",
     "richDescription": "product 4 richDescription",
     "image": "http://nice-food-server.herokuapp.com/public/uploads/967da9d2-6fcf-4304-bd81-1fcef5cee495.jpg-1661351954651.jpeg",
-    "brand": "product 4 brand",
+    "brand": "product 11 brand",
     "price": 26,
-    "category": "62e2bdfbeca3a83d4408bac7",
+    "category": "63073138a06b59c352d7e776",
     "countInStock": 11,
     "rating": 5,
     "numReviews": 24,
