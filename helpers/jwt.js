@@ -13,7 +13,7 @@ function authJwt(){
         //https://regex101.com/r/x4TO5x/1
         path: [
             { url: /\/public\/uploads(.*)/, methods: ['GET','OPTIONS']},
-            { url: /\/api\/v1\/products(.*)/, methods: ['GET','OPTIONS', 'DELETE', 'POST']},
+            { url: /\/api\/v1\/products(.*)/, methods: ['GET','OPTIONS', 'DELETE', 'POST', 'PUT']},
             { url: /\/api\/v1\/categories(.*)/, methods: ['GET','OPTIONS']},
             { url: /\/api\/v1\/users(.*)/, methods: ['GET','OPTION','DELETE']},
             `${api}/users/login`,
