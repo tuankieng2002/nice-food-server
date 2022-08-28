@@ -73,14 +73,14 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmY0N
 GET http://localhost:3000/api/v1/products/62e349cd79188f959ce71cef
 
 ###
-PUT http://localhost:3000/api/v1/products/630638138a36af25e28463bd
+PUT http://localhost:3000/api/v1/products/63072534a7ef40b6cf60da68
 Content-Type: application/json
 
 {
-    "name": "product 11",
+    "name": "product 14",
     "description" : "product 4 description",
     "richDescription": "product 4 richDescription",
-    "image": "http://nice-food-server.herokuapp.com/public/uploads/967da9d2-6fcf-4304-bd81-1fcef5cee495.jpg-1661351954651.jpeg",
+    "image": "http://nice-food-server.herokuapp.com/public/uploads/f6b847f3-5c82-4ad4-8854-29c188747c96.jpg-1661412659861.jpeg",
     "brand": "product 11 brand",
     "price": 26,
     "category": "63073138a06b59c352d7e776",
