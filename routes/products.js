@@ -104,10 +104,10 @@ router.post(`/`, uploadOptions.single('image'), async (req, res) => {
 
 router.put('/:id', async (req, res) => {
 
-    if (!mongoose.isValidObjectId(req.body.category)) {
+    /**if (!mongoose.isValidObjectId(req.body.category)) {
         console.log("Invalid category id id");
         return res.status(400).send("Invalid category id");
-    };
+    };**/
 
 
     if (!mongoose.isValidObjectId(req.params.id)) {
